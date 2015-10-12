@@ -14,7 +14,6 @@ function onLocation(position){
   };
 
   createMap(myPosition);
-  setupAutocomplete();
 }
 
 function onError(err){
