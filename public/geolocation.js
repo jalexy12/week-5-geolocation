@@ -14,7 +14,6 @@ function onLocation(position){
   };
 
   createMap(myPosition);
-  setupAutocomplete();
 }
 
 function onError(err){
@@ -22,8 +21,9 @@ function onError(err){
 }
 
 function createMap(position){
-  map = new google.maps.Map($('#map')[0], {
+  var mapOptions = {
     center: position,
     zoom: 17
-  });
+  };
+  map = new google.maps.Map($('#map')[0], mapOptions);
 }
