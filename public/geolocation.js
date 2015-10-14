@@ -26,4 +26,12 @@ function createMap(position){
     zoom: 17
   };
   map = new google.maps.Map($('#map')[0], mapOptions);
+  createMarker(position);
+}
+
+function createMarker(position) {
+  var marker = new google.maps.Marker({
+   position: position,
+   map: map,
+ });
 }
